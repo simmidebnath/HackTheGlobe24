@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #13734E; 
+            color: white; 
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            padding: 50px;
+        }
+        .logo {
+            width: 100px; 
+            height: auto; 
+            margin-bottom: 20px; 
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: white; }
+        }
+
+        h1 {
+            overflow: hidden; 
+            white-space: nowrap; 
+            margin: 0 auto;
+            letter-spacing: .10em;
+            animation: typing 1.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+
+        p {
+            font-family: Arial, sans-serif
+            font-size: 40px; 
+            margin-top: 5px;
+            letter-spacing: .10em; 
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>RePower</h1>
+    <p></p>
+    <img src="{% static 'images/htg-logo-final.png' %}" alt="Logo" class="logo">
+    <p>Empowering All Refugees.</p>
+    <a href="{% url 'home' %}" class="btn">Login</a>
+</div>
+
+</body>
+</html>
